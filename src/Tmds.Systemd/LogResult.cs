@@ -3,7 +3,7 @@ namespace Tmds.Systemd
     /// <summary>Result of a log operation.</summary>
     public enum LogResult
     {
-        /// <summary>Message sent succesfully.</summary>
+        /// <summary>Message sent successfully.</summary>
         Success,
         /// <summary>Unknown error.</summary>
         UnknownError,

@@ -4,7 +4,6 @@ using System.Buffers.Binary;
 using System.Buffers.Text;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Runtime.CompilerServices;
@@ -13,7 +12,7 @@ using System.Text;
 namespace Tmds.Systemd
 {
     /// <summary>Represents a structured log message.</summary>
-    public class JournalMessage : IDisposable
+    public sealed class JournalMessage : IDisposable
     {
         // If the buffer can't fit at least a character, the Encoder throws.
         private const int MaximumBytesPerUtf8Char = 4;

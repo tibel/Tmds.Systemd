@@ -5,9 +5,9 @@ namespace Tmds.Systemd
     /// <summary>
     /// Describes a service state change.
     /// </summary>
-    public struct ServiceState
+    public readonly struct ServiceState
     {
-        private string _state;
+        private readonly string _state;
 
         /// <summary>
         /// Service startup is finished.

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Concurrent;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -6,7 +5,7 @@ using Microsoft.Extensions.Options;
 namespace Tmds.Systemd.Logging
 {
     [ProviderAlias("Journal")]
-    class JournalLoggerProvider : ILoggerProvider, ISupportExternalScope
+    internal sealed class JournalLoggerProvider : ILoggerProvider, ISupportExternalScope
     {
         private readonly ConcurrentDictionary<string, JournalLogger> _loggers = new ConcurrentDictionary<string, JournalLogger>();
         private IExternalScopeProvider _scopeProvider;

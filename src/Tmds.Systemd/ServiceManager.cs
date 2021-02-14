@@ -8,7 +8,7 @@ namespace Tmds.Systemd
     /// <summary>
     /// Interact with the systemd system manager.
     /// </summary>
-    public partial class ServiceManager
+    public sealed partial class ServiceManager
     {
         private static string _invocationId;
         private static bool? _isRunningAsService;

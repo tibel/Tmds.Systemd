@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Tmds.Systemd.Logging
 {
-    class JournalLogger : ILogger
+    internal sealed class JournalLogger : ILogger
     {
         internal static readonly Action<Exception, JournalMessage> DefaultExceptionFormatter =
             (exception, message) => FormatException(exception, message);
@@ -169,7 +169,7 @@ namespace Tmds.Systemd.Logging
         /// <summary>
         /// An empty scope without any logic
         /// </summary>
-        class NullScope : IDisposable
+        private sealed class NullScope : IDisposable
         {
             public static NullScope Instance { get; } = new NullScope();
 

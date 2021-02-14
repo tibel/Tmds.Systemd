@@ -5,7 +5,7 @@ namespace Tmds.Systemd.Logging
     /// <summary>
     /// Options for the journal logger.
     /// </summary>
-    public class JournalLoggerOptions
+    public sealed class JournalLoggerOptions
     {
         /// <summary>
         /// Default formatter for exceptions.
